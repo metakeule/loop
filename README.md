@@ -3,6 +3,8 @@ loop
 
 loop io.Reader for golang
 
+[![Build Status](https://secure.travis-ci.org/metakeule/loop.png)](http://travis-ci.org/metakeule/loop)
+
 Usage
 -----
 
