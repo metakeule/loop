@@ -1,12 +1,3 @@
-loop
-====
-
-loop io.Reader for golang
-
-Usage
------
-
-```go
 package main
 
 import (
@@ -24,4 +15,3 @@ func main() {
 		fmt.Print(string(b))
 	}
 }
-```

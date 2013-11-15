@@ -1,0 +1,11 @@
+{
+  "Exports": {
+    "*Loop.Read": "(*Loop) Read([]byte)(int,error)",
+    "*Loop.Reset": "(*Loop) Reset()",
+    "Loop": "type Loop struct {Data []byte}",
+    "New": "func ([]byte) *Loop",
+    "init": ""
+  },
+  "Imports": {},
+  "Path": "github.com/metakeule/loop"
+}
