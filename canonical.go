@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	VERSION = "2"
+	VERSION = 2
 )
 
 func init() {
