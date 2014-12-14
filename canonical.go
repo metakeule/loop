@@ -1,13 +1,13 @@
 // +build !dev
 
-package loop 	// import "gopkg.in/metakeule/loop.v1"
+package loop 	// import "gopkg.in/metakeule/loop.v2"
 
 import (
 	"github.com/metakeule/nodouble"
 )
 
 const (
-	VERSION = "1"
+	VERSION = "2"
 )
 
 func init() {

@@ -13,7 +13,7 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/metakeule/loop.v1"
+	"gopkg.in/metakeule/loop.v2"
 )
 
 func main() {
