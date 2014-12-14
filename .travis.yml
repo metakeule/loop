@@ -1,4 +1,6 @@
 language: go
+install:
+  - go get gopkg.in/metakeule/loop.v1
 script: go test -v -tags=dev ./...
 go:
   - 1.0
