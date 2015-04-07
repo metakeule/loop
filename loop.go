@@ -46,7 +46,7 @@ func (s *Spinner) Spin() (err error) {
 	b := make([]byte, 1)
 	s.l.Read(b)
 
-	_, err = fmt.Fprint(s.Writer, string(b))
+	_, err = fmt.Fprint(s.Writer, "\b"+string(b))
 	return
 }
 
