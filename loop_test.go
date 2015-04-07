@@ -1,7 +1,6 @@
 package loop
 
 import (
-	"bytes"
 	"testing"
 )
 
@@ -30,22 +29,5 @@ func TestLoop(t *testing.T) {
 		if string(all) != expected {
 			t.Errorf("wrong result, should be %s, but is: %s\n", expected, string(all))
 		}
-	}
-}
-
-func TestSpin(t *testing.T) {
-	var bf bytes.Buffer
-
-	sp := NewSpinner(&bf)
-
-	sp.Spin()
-	sp.Spin()
-	sp.Spin()
-	sp.Spin()
-	sp.Spin()
-
-	expected := `-\|/-`
-	if bf.String() != expected {
-		t.Errorf("got: %#v; expected: %#v", bf.String(), expected)
 	}
 }

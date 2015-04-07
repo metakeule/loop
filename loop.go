@@ -1,12 +1,5 @@
 package loop
 
-import (
-	"fmt"
-	"io"
-	"os"
-	"time"
-)
-
 type Loop struct {
 	Data    []byte
 	pointer int
@@ -31,32 +24,4 @@ func (l *Loop) Read(p []byte) (n int, err error) {
 	}
 	l.pointer = (l.pointer + len(p)) % l.length
 	return len(p), nil
-}
-
-type Spinner struct {
-	io.Writer
-	l *Loop
-}
-
-func NewSpinner(w io.Writer) *Spinner {
-	return &Spinner{w, New([]byte("-\\|/"))}
-}
-
-func (s *Spinner) Spin() (err error) {
-	b := make([]byte, 1)
-	s.l.Read(b)
-
-	_, err = fmt.Fprint(s.Writer, "\b"+string(b))
-	return
-}
-
-func (s *Spinner) SpinEvery(d time.Duration) {
-	for {
-		s.Spin()
-		time.Sleep(d)
-	}
-}
-
-func NewStdoutSpinner() *Spinner {
-	return NewSpinner(os.Stdout)
 }
