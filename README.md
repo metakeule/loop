@@ -13,7 +13,7 @@ package main
 
 import (
 	"fmt"
-	"gopkg.in/metakeule/loop.v3"
+	"gopkg.in/metakeule/loop.v4"
 )
 
 func main() {
@@ -25,5 +25,25 @@ func main() {
 		l.Read(b)
 		fmt.Print(string(b))
 	}
+}
+```
+
+Spinner subpackage
+------------------
+
+```go
+package main
+
+import (
+    "gopkg.in/metakeule/loop.v4/spinner"
+    "time"
+)
+
+func main() {
+    sp := spinner.New()
+    for {
+        sp.Spin()
+        time.Sleep(120 * time.Millisecond)
+    }
 }
 ```
