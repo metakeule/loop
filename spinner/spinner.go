@@ -9,11 +9,11 @@ type Spinner struct {
 	l *loop.Loop
 }
 
-func New() *Spinner {
+func NewReverse() *Spinner {
 	return &Spinner{loop.New([]byte("-\\|/"))}
 }
 
-func NewReverse() *Spinner {
+func New() *Spinner {
 	return &Spinner{loop.New([]byte("/|\\-"))}
 }
 

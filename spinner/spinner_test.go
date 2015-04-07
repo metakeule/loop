@@ -7,13 +7,13 @@ import (
 	"testing"
 )
 
-func TestSpin(t *testing.T) {
+func TestSpinReverse(t *testing.T) {
 
 	old := os.Stdout // keep backup of the real stdout
 	r, w, _ := os.Pipe()
 	os.Stdout = w
 
-	sp := New()
+	sp := NewReverse()
 
 	sp.Spin()
 	sp.Spin()
@@ -40,13 +40,13 @@ func TestSpin(t *testing.T) {
 	}
 }
 
-func TestSpinReverse(t *testing.T) {
+func TestSpin(t *testing.T) {
 
 	old := os.Stdout // keep backup of the real stdout
 	r, w, _ := os.Pipe()
 	os.Stdout = w
 
-	sp := NewReverse()
+	sp := New()
 
 	sp.Spin()
 	sp.Spin()
